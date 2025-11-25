@@ -37,7 +37,7 @@ export default function Overview() {
 
         <div className="flex flex-col items-center">
           <a
-            href="https://www.linkedin.com/in/savathallapalli-jasmine/"
+          href="https://www.linkedin.com/in/jasminesavathallapalli"
             target="_blank"
             className="bg-blue-600 hover:bg-blue-700 transition px-6 py-3 rounded-xl text-sm font-medium shadow-md"
           >
