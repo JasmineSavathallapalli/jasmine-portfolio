@@ -1,0 +1,266 @@
+/* ===== Tailwind Base ===== */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== GLOBAL STYLING ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #090b1a;
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ===== FLIP CARD ===== */
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  width: 100%;
+  height: 230px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 20px;
+  background: #0f1123;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card-front {
+  background: #0f1123;
+}
+
+.flip-card-back {
+  background: #1b1e33;
+  transform: rotateY(180deg);
+}
+
+/* ===== 3D CUBE ICON ===== */
+.icon-cube {
+  width: 55px;
+  height: 55px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: cube-spin 6s linear infinite;
+}
+
+.icon-cube div {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(135deg, #8b5cf6, #4c1d95);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.icon-cube .front  { transform: translateZ(27px); }
+.icon-cube .back   { transform: rotateY(180deg) translateZ(27px); }
+.icon-cube .right  { transform: rotateY(90deg) translateZ(27px); }
+.icon-cube .left   { transform: rotateY(-90deg) translateZ(27px); }
+.icon-cube .top    { transform: rotateX(90deg) translateZ(27px); }
+.icon-cube .bottom { transform: rotateX(-90deg) translateZ(27px); }
+
+@keyframes cube-spin {
+  0%   { transform: rotateX(0deg) rotateY(0deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+/* ===== 3D ORB ICON ===== */
+.icon-orb {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #60a5fa, #1e3a8a);
+  box-shadow:
+    0 0 25px rgba(96,165,250,0.9),
+    inset 0 0 20px rgba(255,255,255,0.4);
+  animation: orb-float 3s ease-in-out infinite;
+}
+
+@keyframes orb-float {
+  0%, 100% { transform: translateY(0px); }
+  50%      { transform: translateY(-10px); }
+}
+
+/* ===== 3D PRISM ICON ===== */
+.icon-prism {
+  width: 0px;
+  height: 0px;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 60px solid #10b981;
+  filter: drop-shadow(0px 0px 15px rgba(16,185,129,0.7));
+}
+
+/* ===== 3D DIAMOND ICON ===== */
+.icon-diamond {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #ec4899, #be185d);
+  transform: rotate(45deg) rotateX(25deg);
+  box-shadow:
+    0 0 25px rgba(236,72,153,0.9),
+    inset 0 0 20px rgba(255,255,255,0.4);
+}
+/* ------------------------ */
+/*  FLIP CARD BASE STYLES   */
+/* ------------------------ */
+
+.flip-card {
+  background: transparent;
+  width: 100%;
+  height: 260px;
+  perspective: 1000px; /* 3D depth */
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.9s ease;
+  transform-style: preserve-3d;
+}
+
+/* Flip on hover */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg) scale(1.03);
+}
+
+/* FRONT + BACK shared style */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* Background */
+  background: #0d0f1e;
+  border: 2px solid rgba(128, 0, 255, 0.3);
+
+  /* Glow */
+  box-shadow: 0 0 20px rgba(128, 0, 255, 0.2);
+  transition: all 0.4s ease;
+}
+
+/* Hover glowing color change */
+.flip-card:hover .flip-card-front,
+.flip-card:hover .flip-card-back {
+  border-color: #b45aff;
+  box-shadow: 0 0 25px #b45aff;
+}
+
+/* FRONT */
+.flip-card-front {
+  transform: rotateY(0deg);
+}
+
+/* BACK */
+.flip-card-back {
+  transform: rotateY(180deg);
+  padding: 20px;
+}
+/* MAIN VERTICAL TIMELINE LINE */
+./* Full vertical line */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  background: linear-gradient(to bottom, #a855f7, #c084fc, #a855f7);
+  height: 100%;
+  z-index: 0;
+}
+
+/* Timeline badge glow */
+.timeline-badge {
+  box-shadow: 0 0 20px #b06bff, 0 0 40px #8b5cf6 inset;
+}
+
+/* Card hover */
+.timeline-card:hover {
+  border-color: #c084fc;
+  box-shadow: 0 0 15px #a855f7aa;
+  transition: 0.3s ease;
+}
+
+.scroll-indicator {
+  width: 40px;
+  height: 70px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.scroll-dot {
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  animation: scrollBounce 1.4s infinite ease-in-out;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(18px); 
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(10px);
+    opacity: 0.9;
+  }
+}
+/* Slow spin animation */
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+/* Star sparkle */
+@keyframes star {
+  0%,100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+.animate-star {
+  animation: star 1.5s infinite ease-in-out;
+}
+
+
+
