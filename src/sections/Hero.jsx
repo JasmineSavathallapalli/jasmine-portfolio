@@ -4,14 +4,8 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Hero({ setResumeOpen }) {
   return (
-    <section
-      className="
-      relative min-h-screen flex items-start pt-32 
-      max-w-6xl mx-auto px-6
-      text-gray-900 dark:text-white
-      "
-    >
-      
+    
+      <section className="relative min-h-screen flex items-center justify-center max-w-6xl mx-auto px-6 text-gray-900 dark:text-white">
 
       <div className="grid md:grid-cols-2 gap-10 items-center w-full">
 
