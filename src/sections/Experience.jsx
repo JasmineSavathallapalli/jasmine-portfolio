@@ -67,11 +67,11 @@ export default function Experience() {
       text-gray-900 dark:text-white"
     >
       {/* TITLE */}
-      <p className="text-green-500 dark:text-green-400 text-[9px] tracking-[3px] mb-2">
+      <p className="text-green-500 dark:text-green-400 text-sm md:text-base tracking-[3px] mb-3">
         // WHAT I HAVE DONE SO FAR
       </p>
 
-      <h2 className="text-4xl md:text-5xl font-bold mb-14">
+      <h2 className="text-5xl md:text-6xl font-bold mb-16">
         Work Experience<span className="text-blue-500 dark:text-blue-400">.</span>
       </h2>
 
@@ -90,7 +90,7 @@ export default function Experience() {
             hidden: {},
             show: { transition: { staggerChildren: 0.25 } },
           }}
-          className="space-y-10"
+          className="space-y-12"
         >
           {experiences.map((exp, index) => (
             <motion.div
@@ -105,12 +105,12 @@ export default function Experience() {
                 whileInView={{ scale: 1 }}
                 transition={{ duration: 0.4 }}
                 className="
-                  absolute left-0 top-3.5 w-5 h-5 rounded-full border-2 border-blue-500 
+                  absolute left-0 top-4 w-5 h-5 rounded-full border-2 border-blue-500 
                   bg-white dark:bg-[#060B18]
                   flex items-center justify-center
                 "
               >
-                <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
               </motion.div>
 
               {/* CARD */}
@@ -118,7 +118,7 @@ export default function Experience() {
                 className="
                   bg-gray-100 dark:bg-[#101A2C]
                   border border-gray-300 dark:border-blue-500/40
-                  rounded-xl p-5
+                  rounded-xl p-6
                   transition duration-300
                   hover:border-blue-400
                   hover:shadow-[0_0_18px_rgba(59,130,246,0.25)]
@@ -127,19 +127,19 @@ export default function Experience() {
               >
 
                 {/* HEADER */}
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
-                    <h3 className="text-base font-semibold">
+                    <h3 className="text-lg md:text-xl font-semibold">
                       {exp.role}
                     </h3>
 
-                    <p className="text-blue-500 dark:text-blue-400 text-xs mt-1">
+                    <p className="text-blue-500 dark:text-blue-400 text-sm md:text-base mt-1">
                       {exp.company}
                     </p>
                   </div>
 
                   <span className="
-                    mt-2 md:mt-0 text-[11px] px-3 py-1 rounded-md border
+                    mt-2 md:mt-0 text-sm px-3 py-1 rounded-md border
                     border-green-400 dark:border-green-500
                     text-green-600 dark:text-green-400
                     bg-green-100 dark:bg-green-900/20
@@ -149,12 +149,12 @@ export default function Experience() {
                 </div>
 
                 {/* TAGS */}
-                <div className="flex flex-wrap gap-2 mb-3 text-[11px]">
+                <div className="flex flex-wrap gap-2 mb-4 text-sm">
                   {exp.tags.map((tag, i) => (
                     <span
                       key={i}
                       className={`
-                        px-2.5 py-1 rounded-md border
+                        px-3 py-1 rounded-md border
                         ${
                           tag === "Remote"
                             ? "border-blue-400 text-blue-600 bg-blue-100 dark:border-blue-500 dark:text-blue-400 dark:bg-blue-900/20"
@@ -170,10 +170,10 @@ export default function Experience() {
                 </div>
 
                 {/* POINTS */}
-                <ul className="space-y-2 text-xs text-gray-700 dark:text-gray-300 leading-relaxed">
+                <ul className="space-y-3 text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
                   {exp.points.map((point, i) => (
                     <li key={i} className="flex gap-2">
-                      <span className="text-blue-500 dark:text-blue-400 mt-[2px] text-[10px]">▸</span>
+                      <span className="text-blue-500 dark:text-blue-400 mt-[3px] text-sm">▸</span>
                       {point}
                     </li>
                   ))}

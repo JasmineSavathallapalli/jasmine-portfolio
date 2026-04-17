@@ -16,7 +16,6 @@ import CursorGlow from "./components/CursorGlow";
 export default function App() {
   const [resumeOpen, setResumeOpen] = useState(false);
 
-  // 🌗 Load saved theme
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
 
@@ -57,6 +56,7 @@ export default function App() {
         bg-white text-gray-900
         dark:bg-[#060B18] dark:text-white
         transition-colors duration-300
+        text-base md:text-lg   /* 🔥 ONLY CHANGE */
       "
     >
       {/* 🌟 Cursor Glow */}

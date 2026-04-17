@@ -78,15 +78,15 @@ export default function Projects() {
       "
     >
       {/* HEADER */}
-      <p className="text-purple-500 dark:text-purple-400 uppercase tracking-widest text-sm mb-2">
-        My Work
+      <p className="text-purple-500 dark:text-green-400 uppercase tracking-widest text-base md:text-lg mb-3">
+        // My Work
       </p>
 
-      <h2 className="text-5xl sm:text-6xl font-bold mb-6">
+      <h2 className="text-6xl md:text-7xl font-bold mb-8">
         Projects<span className="text-purple-500 dark:text-purple-400">.</span>
       </h2>
 
-      <p className="text-gray-600 dark:text-slate-300 max-w-3xl mb-14 leading-relaxed">
+      <p className="text-gray-600 dark:text-slate-300 text-base md:text-lg max-w-3xl mb-16 leading-relaxed">
         These projects represent a mix of deep learning, machine learning, full-stack web applications and blockchain analytics. Each one is backed by real code and experiments on GitHub, reflecting how I think about problems, design systems and ship things end-to-end.
       </p>
 
@@ -120,24 +120,24 @@ dark:hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]
 
             {/* CONTENT */}
             <div className="p-6 flex flex-col">
-              <p className="text-sm text-purple-500 dark:text-purple-300 font-medium mb-1">
+              <p className="text-base text-purple-500 dark:text-purple-300 font-medium mb-2">
                 {project.subtitle}
               </p>
 
-              <h3 className="text-xl font-semibold">
+              <h3 className="text-2xl md:text-3xl font-semibold mb-2">
                 {project.title}
               </h3>
 
-              <p className="text-gray-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+              <p className="text-gray-600 dark:text-slate-300 text-base md:text-lg leading-relaxed mb-5">
                 {project.blurb}
               </p>
 
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-5">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
                     className="
-                      text-xs px-2.5 py-1 rounded-full
+                      text-sm px-3 py-1.5 rounded-full
                       bg-purple-100 dark:bg-purple-500/10
                       text-purple-600 dark:text-purple-300
                       border border-purple-300 dark:border-purple-500/20
@@ -152,7 +152,7 @@ dark:hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]
                 href={project.github}
                 target="_blank"
                 className="
-                  text-sm font-medium
+                  text-base md:text-lg font-medium
                   text-purple-600 dark:text-purple-300
                   hover:text-purple-800 dark:hover:text-purple-100
                   underline underline-offset-4 mt-auto

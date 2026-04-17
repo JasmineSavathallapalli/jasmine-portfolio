@@ -4,7 +4,6 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [dark, setDark] = useState(true);
 
-  // ✅ Load saved theme OR system preference
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
 
@@ -19,7 +18,6 @@ export default function Navbar() {
     }
   }, []);
 
-  // ✅ Toggle theme
   const toggleTheme = () => {
     const newTheme = !dark;
     setDark(newTheme);
@@ -39,10 +37,10 @@ export default function Navbar() {
       bg-white/80 dark:bg-[#060B18]/80 
       border-b border-gray-300 dark:border-gray-800"
     >
-      <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
 
         {/* LOGO */}
-        <div className="font-mono font-bold text-lg flex items-center gap-1">
+        <div className="font-mono font-bold text-xl md:text-2xl flex items-center gap-1">
           <span className="text-gray-500">&lt;</span>
           <span className="text-blue-500 dark:text-blue-400">Jasmine</span>
           <span className="text-green-500 dark:text-green-400">/</span>
@@ -50,14 +48,14 @@ export default function Navbar() {
         </div>
 
         {/* DESKTOP LINKS */}
-        <div className="hidden md:flex items-center gap-6 text-sm 
+        <div className="hidden md:flex items-center gap-8 text-base md:text-lg 
           text-gray-600 dark:text-gray-400">
 
           {["about", "experience", "skills", "projects", "contact"].map((item) => (
             <a
               key={item}
               href={`#${item}`}
-              className="px-3 py-1 rounded-md transition
+              className="px-3 py-1.5 rounded-md transition
               hover:text-black dark:hover:text-white
               hover:bg-gray-200 dark:hover:bg-[#101A2C]"
             >
@@ -72,7 +70,7 @@ export default function Navbar() {
           {/* 🌗 THEME TOGGLE */}
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-lg 
+            className="p-2.5 text-lg rounded-lg 
               bg-gray-200 dark:bg-[#101A2C] 
               border border-gray-300 dark:border-gray-700 
               hover:border-blue-500 transition"
@@ -85,9 +83,9 @@ export default function Navbar() {
             onClick={() => setOpen(!open)}
             className="md:hidden flex flex-col gap-1"
           >
-            <span className="w-5 h-[2px] bg-black dark:bg-white"></span>
-            <span className="w-5 h-[2px] bg-black dark:bg-white"></span>
-            <span className="w-5 h-[2px] bg-black dark:bg-white"></span>
+            <span className="w-6 h-[2px] bg-black dark:bg-white"></span>
+            <span className="w-6 h-[2px] bg-black dark:bg-white"></span>
+            <span className="w-6 h-[2px] bg-black dark:bg-white"></span>
           </button>
 
         </div>
@@ -99,8 +97,8 @@ export default function Navbar() {
           className="md:hidden 
           bg-white dark:bg-[#060B18] 
           border-t border-gray-300 dark:border-gray-800 
-          px-6 py-4 flex flex-col gap-4 
-          text-gray-700 dark:text-gray-300"
+          px-6 py-5 flex flex-col gap-5 
+          text-base text-gray-700 dark:text-gray-300"
         >
           {["about", "experience", "skills", "projects", "contact"].map((item) => (
             <a key={item} href={`#${item}`} onClick={() => setOpen(false)}>

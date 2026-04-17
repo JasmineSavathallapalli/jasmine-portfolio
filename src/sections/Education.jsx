@@ -12,11 +12,11 @@ export default function Education() {
       <div className="max-w-6xl mx-auto px-6">
 
         {/* HEADER */}
-        <p className="text-green-500 dark:text-green-400 uppercase tracking-[3px] text-xs mb-2">
+        <p className="text-green-500 dark:text-green-400 uppercase tracking-[3px] text-sm md:text-base mb-3">
           // ACADEMICS
         </p>
 
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 tracking-tight">
+        <h2 className="text-5xl md:text-6xl font-bold mb-14 tracking-tight">
           Education<span className="text-purple-500 dark:text-purple-400">.</span>
         </h2>
 
@@ -24,8 +24,7 @@ export default function Education() {
         <div className="grid md:grid-cols-2 gap-6 mb-6">
 
           {/* MCA */}
-          <div
-            className="
+          <div className="
 relative
 bg-gray-100 dark:bg-[#101A2C]
 border border-gray-300 dark:border-[#1e293b]
@@ -38,20 +37,19 @@ hover:border-purple-400
 
 hover:shadow-[0_0_30px_rgba(139,92,246,0.35)]
 dark:hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]
-"
-          >
+">
             <div className="absolute top-0 left-0 w-full h-[2px]
               bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-80" />
 
-            <h3 className="text-lg font-semibold mb-2">
+            <h3 className="text-xl md:text-2xl font-semibold mb-3">
               Master of Computer Applications
             </h3>
 
-            <p className="text-blue-500 dark:text-blue-400 text-sm mb-4">
+            <p className="text-blue-500 dark:text-blue-400 text-base md:text-lg mb-5">
               Vellore Institute of Technology, Vellore
             </p>
 
-            <div className="flex gap-3 text-xs">
+            <div className="flex gap-3 text-sm md:text-base">
               <span className="px-3 py-1 bg-gray-200 dark:bg-[#1A2338] rounded-md border border-gray-300 dark:border-[#22304a]">
                 2024 – 2026
               </span>
@@ -67,8 +65,7 @@ dark:hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]
           </div>
 
           {/* BCA */}
-          <div
-            className="
+          <div className="
 relative
 bg-gray-100 dark:bg-[#101A2C]
 border border-gray-300 dark:border-[#1e293b]
@@ -81,20 +78,19 @@ hover:border-purple-400
 
 hover:shadow-[0_0_30px_rgba(139,92,246,0.35)]
 dark:hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]
-"
-          >
+">
             <div className="absolute top-0 left-0 w-full h-[2px]
               bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-80" />
 
-            <h3 className="text-lg font-semibold mb-2">
+            <h3 className="text-xl md:text-2xl font-semibold mb-3">
               Bachelor of Computer Applications
             </h3>
 
-            <p className="text-blue-500 dark:text-blue-400 text-sm mb-4">
+            <p className="text-blue-500 dark:text-blue-400 text-base md:text-lg mb-5">
               Sri Venkateswara University, Tirupati
             </p>
 
-            <div className="flex gap-3 text-xs">
+            <div className="flex gap-3 text-sm md:text-base">
               <span className="px-3 py-1 bg-gray-200 dark:bg-[#1A2338] rounded-md border border-gray-300 dark:border-[#22304a]">
                 2021 – 2024
               </span>
@@ -115,52 +111,48 @@ dark:hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]
         <div className="grid md:grid-cols-2 gap-6">
 
           {/* INTERMEDIATE */}
-          <div
-            className="
+          <div className="
               flex justify-between items-center
               bg-gray-100 dark:bg-[#101A2C]
               border border-gray-300 dark:border-[#1e293b]
-              rounded-xl px-6 py-4
-            "
-          >
+              rounded-xl px-6 py-5
+            ">
             <div>
-              <h4 className="text-sm font-semibold">
+              <h4 className="text-base md:text-lg font-semibold">
                 Intermediate (PCB)
               </h4>
 
-              <p className="text-gray-500 dark:text-gray-400 text-xs">
+              <p className="text-gray-500 dark:text-gray-400 text-sm md:text-base">
                 Sri Chaitanya Junior College
               </p>
             </div>
 
             <div className="text-right">
-              <p className="text-xs text-gray-500">2020</p>
-              <p className="text-green-600 dark:text-green-400 font-semibold">9.37</p>
+              <p className="text-sm text-gray-500">2020</p>
+              <p className="text-green-600 dark:text-green-400 text-base md:text-lg font-semibold">9.37</p>
             </div>
           </div>
 
           {/* SSC */}
-          <div
-            className="
+          <div className="
               flex justify-between items-center
               bg-gray-100 dark:bg-[#101A2C]
               border border-gray-300 dark:border-[#1e293b]
-              rounded-xl px-6 py-4
-            "
-          >
+              rounded-xl px-6 py-5
+            ">
             <div>
-              <h4 className="text-sm font-semibold">
+              <h4 className="text-base md:text-lg font-semibold">
                 Secondary School (SSC)
               </h4>
 
-              <p className="text-gray-500 dark:text-gray-400 text-xs">
+              <p className="text-gray-500 dark:text-gray-400 text-sm md:text-base">
                 Sri Chaitanya School
               </p>
             </div>
 
             <div className="text-right">
-              <p className="text-xs text-gray-500">2018</p>
-              <p className="text-green-600 dark:text-green-400 font-semibold">10.0</p>
+              <p className="text-sm text-gray-500">2018</p>
+              <p className="text-green-600 dark:text-green-400 text-base md:text-lg font-semibold">10.0</p>
             </div>
           </div>
 

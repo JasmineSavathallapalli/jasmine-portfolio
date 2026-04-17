@@ -9,19 +9,18 @@ export default function TechStack() {
     >
 
       {/* HEADER */}
-      <p className="text-green-500 dark:text-green-400 uppercase tracking-[4px] text-[11px] mb-2">
+      <p className="text-green-500 dark:text-green-400 uppercase tracking-[4px] text-sm md:text-base mb-3">
         // TECHNOLOGIES
       </p>
 
-      <h2 className="text-4xl md:text-5xl font-bold mb-14">
+      <h2 className="text-5xl md:text-6xl font-bold mb-16">
         Tech Stack<span className="text-green-500 dark:text-green-400">.</span>
       </h2>
 
       {/* GRID */}
       <div className="grid md:grid-cols-2 gap-6">
 
-        {/* CARD COMPONENT */}
-        {[
+        {[ 
           {
             title: "💬 Languages",
             color: "text-orange-500 dark:text-orange-400",
@@ -75,31 +74,31 @@ export default function TechStack() {
             className="
               bg-gray-100 dark:bg-[#101A2C]
               border border-gray-300 dark:border-[#1f2a44]
-              p-5 rounded-xl
+              p-6 rounded-xl
               hover:border-blue-400
               transition
               hover:shadow-[0_0_15px_rgba(59,130,246,0.2)]
             "
           >
 
-            <h3 className={`mb-4 text-[13px] font-semibold flex items-center gap-2 ${section.color}`}>
+            <h3 className={`mb-5 text-base md:text-lg font-semibold flex items-center gap-2 ${section.color}`}>
               {section.title}
             </h3>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-3">
               {section.items.map((t, idx) => (
                 <div
                   key={idx}
                   className="
-                    flex items-center gap-2 px-3 py-1.5
+                    flex items-center gap-2 px-4 py-2
                     border border-gray-300 dark:border-[#1f2a44]
-                    rounded-md text-[12px]
+                    rounded-md text-sm md:text-base
                     bg-white dark:bg-[#060B18]
                     text-gray-700 dark:text-gray-300
                     hover:border-blue-400 transition
                   "
                 >
-                  <i className={`${t.icon} text-base`} />
+                  <i className={`${t.icon} text-lg`} />
                   {t.name}
                 </div>
               ))}

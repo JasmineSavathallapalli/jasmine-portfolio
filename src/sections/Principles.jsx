@@ -13,11 +13,11 @@ export default function Principles() {
     >
 
       {/* HEADER */}
-      <p className="text-green-500 dark:text-green-400 uppercase tracking-[3px] text-[11px] mb-2">
+      <p className="text-green-500 dark:text-green-400 uppercase tracking-[3px] text-sm md:text-base mb-3">
         // MORE ABOUT ME
       </p>
 
-      <h2 className="text-3xl md:text-4xl font-bold mb-10 tracking-tight">
+      <h2 className="text-5xl md:text-6xl font-bold mb-12 tracking-tight">
         Professional Highlights
         <span className="text-purple-500 dark:text-purple-400">.</span>
       </h2>
@@ -47,14 +47,14 @@ dark:hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]
           <div className="absolute top-0 left-0 w-full h-[2px]
             bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-80" />
 
-          <div className="flex items-center gap-2 mb-3 
-            text-gray-700 dark:text-gray-300 text-sm font-semibold">
+          <div className="flex items-center gap-2 mb-4 
+            text-gray-700 dark:text-gray-300 text-base md:text-lg font-semibold">
             🔗 Professional Highlights
           </div>
 
-          <div className="border-t border-gray-300 dark:border-[#1e293b] mb-4"></div>
+          <div className="border-t border-gray-300 dark:border-[#1e293b] mb-5"></div>
 
-          <ul className="space-y-3 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+          <ul className="space-y-3 text-gray-600 dark:text-gray-400 text-base md:text-lg leading-relaxed">
 
             <li>• <span className="text-gray-900 dark:text-white font-medium">Tech explorer</span> : continuously learning</li>
 
@@ -91,7 +91,7 @@ dark:hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]
           <div className="absolute top-0 left-0 w-full h-[2px]
             bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-80" />
 
-          <h3 className="text-gray-800 dark:text-gray-200 font-semibold mb-3 text-sm">
+          <h3 className="text-gray-800 dark:text-gray-200 font-semibold mb-4 text-base md:text-lg">
             Principles
           </h3>
 
@@ -100,9 +100,9 @@ dark:hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]
             className="
               bg-gray-200 dark:bg-[#1A2338]
               border-l-2 border-blue-500
-              p-3 rounded-md
+              p-4 rounded-md
               text-gray-700 dark:text-gray-300
-              text-sm leading-relaxed
+              text-base md:text-lg leading-relaxed
             "
           >
             Build, adapt, and improve — because systems should evolve with real-world needs.
@@ -111,7 +111,7 @@ dark:hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]
           {/* TOGGLE */}
           <div
             onClick={() => setOpen(!open)}
-            className="mt-4 flex items-center gap-2 text-sm text-blue-500 dark:text-blue-400 cursor-pointer"
+            className="mt-5 flex items-center gap-2 text-base md:text-lg text-blue-500 dark:text-blue-400 cursor-pointer"
           >
             <span>{open ? "▼" : "▶"}</span>
             More About Me
@@ -119,7 +119,7 @@ dark:hover:shadow-[0_0_40px_rgba(168,85,247,0.5)]
 
           {/* EXPAND */}
           {open && (
-            <ul className="mt-4 space-y-3 text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+            <ul className="mt-5 space-y-3 text-gray-600 dark:text-gray-400 text-base md:text-lg leading-relaxed">
               <li>• Like turning ideas into working systems</li>
               <li>• Constantly learning and exploring new technologies</li>
               <li>• Interested in creative arts and music (when not coding)</li>

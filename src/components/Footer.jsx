@@ -2,39 +2,39 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0B1221] border-t border-gray-800 py-6 px-6 mt-20">
+    <footer className="bg-[#0B1221] border-t border-gray-800 py-8 px-6 mt-20">
       
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-5">
 
         {/* LEFT */}
-        <p className="text-sm text-gray-400 font-mono">
+        <p className="text-base md:text-lg text-gray-400 font-mono">
           © 2026{" "}
           <span className="text-blue-400">Jasmine Savathallapalli</span>. All rights reserved.
         </p>
 
         {/* RIGHT */}
-        <div className="flex items-center gap-6 text-sm text-gray-400">
+        <div className="flex items-center gap-8 text-base md:text-lg text-gray-400">
 
           <a
             href="https://github.com/JasmineSavathallapalli"
             target="_blank"
-            className="flex items-center gap-1 hover:text-white transition"
+            className="flex items-center gap-2 hover:text-white transition"
           >
-            <FaGithub />
+            <FaGithub className="text-lg md:text-xl" />
             GitHub
           </a>
 
           <a
             href="https://www.linkedin.com/in/jasminesavathallapalli"
             target="_blank"
-            className="flex items-center gap-1 hover:text-white transition"
+            className="flex items-center gap-2 hover:text-white transition"
           >
-            <FaLinkedin />
+            <FaLinkedin className="text-lg md:text-xl" />
             LinkedIn
           </a>
 
           {/* STATUS */}
-          <div className="flex items-center gap-2 text-xs font-mono">
+          <div className="flex items-center gap-2 text-sm md:text-base font-mono">
             <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
             All systems go
           </div>

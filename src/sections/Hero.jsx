@@ -4,26 +4,25 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Hero({ setResumeOpen }) {
   return (
-    
-      <section className="relative min-h-screen flex items-center justify-center max-w-6xl mx-auto px-6 text-gray-900 dark:text-white">
+    <section className="relative min-h-screen flex items-center justify-center max-w-6xl mx-auto px-6 text-gray-900 dark:text-white">
 
-      <div className="grid md:grid-cols-2 gap-10 items-center w-full">
+      <div className="grid md:grid-cols-2 gap-12 items-center w-full">
 
         {/* LEFT CONTENT */}
         <div>
 
           {/* TAG */}
           <div className="
-            mb-4 text-sm 
+            mb-5 text-base md:text-lg
             text-gray-500 dark:text-gray-400
             border border-gray-300 dark:border-gray-700 
-            inline-block px-3 py-1 rounded-full
+            inline-block px-4 py-1.5 rounded-full
           ">
             ● jasmine.dev — ready to build
           </div>
 
           {/* TITLE */}
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight tracking-tight">
+          <h1 className="text-7xl md:text-8xl lg:text-[90px] font-bold leading-tight tracking-tight">
             Hi, I'm Jasmine <br />
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Savathallapalli.
@@ -31,12 +30,12 @@ export default function Hero({ setResumeOpen }) {
           </h1>
 
           {/* SUBTEXT */}
-          <p className="text-gray-500 dark:text-gray-400 mt-4">
+          <p className="text-gray-500 dark:text-gray-400 mt-5 text-lg md:text-xl">
             MCA'26 @ VIT Vellore · Full Stack Builder · AI/ML Explorer
           </p>
 
           {/* TYPEWRITER */}
-          <p className="text-blue-500 dark:text-blue-400 mt-6 text-lg font-medium h-[28px]">
+          <p className="text-blue-500 dark:text-blue-400 mt-6 text-xl md:text-2xl font-medium h-[32px]">
             <Typewriter
               words={[
                 "Building full-stack web apps.",
@@ -53,12 +52,12 @@ export default function Hero({ setResumeOpen }) {
           </p>
 
           {/* BUTTONS */}
-          <div className="flex gap-3 mt-8 flex-wrap">
+          <div className="flex gap-4 mt-10 flex-wrap">
 
             <button
               onClick={() => setResumeOpen(true)}
               className="
-                bg-blue-500 text-white px-6 py-3 rounded-lg 
+                bg-blue-500 text-white px-7 py-3.5 text-lg rounded-lg 
                 hover:bg-blue-600 transition
               "
             >
@@ -71,12 +70,12 @@ export default function Hero({ setResumeOpen }) {
               className="
                 flex items-center gap-2
                 border border-gray-400 dark:border-gray-600 
-                text-gray-700 dark:text-gray-300
-                px-6 py-3 rounded-lg 
+                text-gray-700 dark:text-gray-300 text-lg
+                px-7 py-3.5 rounded-lg 
                 hover:border-blue-400 transition
               "
             >
-              <FaLinkedin className="text-blue-500 dark:text-blue-400 text-lg" />
+              <FaLinkedin className="text-blue-500 dark:text-blue-400 text-xl" />
               500+ Connections
             </a>
 
@@ -86,19 +85,19 @@ export default function Hero({ setResumeOpen }) {
               className="
                 flex items-center gap-2
                 border border-gray-400 dark:border-gray-600 
-                text-gray-700 dark:text-gray-300
-                px-6 py-3 rounded-lg 
+                text-gray-700 dark:text-gray-300 text-lg
+                px-7 py-3.5 rounded-lg 
                 hover:border-blue-400 transition
               "
             >
-              <FaGithub className="text-black dark:text-white text-lg" />
+              <FaGithub className="text-black dark:text-white text-xl" />
               GitHub ↗
             </a>
 
           </div>
 
           {/* SCROLL TEXT */}
-          <div className="mt-16 text-gray-500 dark:text-gray-500 text-sm tracking-widest">
+          <div className="mt-20 text-gray-500 dark:text-gray-500 text-base tracking-widest">
             SCROLL
           </div>
 
