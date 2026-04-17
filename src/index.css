@@ -4,56 +4,25 @@
 @tailwind utilities;
 
 /* ===== GLOBAL STYLING ===== */
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  background: #090b1a;
+  background: #020617;
   color: white;
-  font-family: 'Inter', sans-serif;
+   cursor: none;
 }
 
+html:not(.dark) body {
+  background: #f8fafc;
+  color: black;
+}
+body {
+  @apply bg-white text-black;
+}
+
+.dark body {
+  @apply bg-[#020617] text-white;
+}
 /* ===== FLIP CARD ===== */
-.flip-card {
-  perspective: 1000px;
-}
 
-.flip-card-inner {
-  width: 100%;
-  height: 230px;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-  border-radius: 20px;
-  background: #0f1123;
-  border: 1px solid rgba(139, 92, 246, 0.4);
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.flip-card-front {
-  background: #0f1123;
-}
-
-.flip-card-back {
-  background: #1b1e33;
-  transform: rotateY(180deg);
-}
 
 /* ===== 3D CUBE ICON ===== */
 .icon-cube {
@@ -125,67 +94,7 @@ body {
 /*  FLIP CARD BASE STYLES   */
 /* ------------------------ */
 
-.flip-card {
-  background: transparent;
-  width: 100%;
-  height: 260px;
-  perspective: 1000px; /* 3D depth */
-}
 
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.9s ease;
-  transform-style: preserve-3d;
-}
-
-/* Flip on hover */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg) scale(1.03);
-}
-
-/* FRONT + BACK shared style */
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  /* Background */
-  background: #0d0f1e;
-  border: 2px solid rgba(128, 0, 255, 0.3);
-
-  /* Glow */
-  box-shadow: 0 0 20px rgba(128, 0, 255, 0.2);
-  transition: all 0.4s ease;
-}
-
-/* Hover glowing color change */
-.flip-card:hover .flip-card-front,
-.flip-card:hover .flip-card-back {
-  border-color: #b45aff;
-  box-shadow: 0 0 25px #b45aff;
-}
-
-/* FRONT */
-.flip-card-front {
-  transform: rotateY(0deg);
-}
-
-/* BACK */
-.flip-card-back {
-  transform: rotateY(180deg);
-  padding: 20px;
-}
 /* MAIN VERTICAL TIMELINE LINE */
 ./* Full vertical line */
 .timeline-line {
@@ -210,40 +119,6 @@ body {
   transition: 0.3s ease;
 }
 
-.scroll-indicator {
-  width: 40px;
-  height: 70px;
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-
-.scroll-dot {
-  width: 8px;
-  height: 8px;
-  background: #ffffff;
-  border-radius: 50%;
-  position: absolute;
-  top: 10px;
-  animation: scrollBounce 1.4s infinite ease-in-out;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateY(0);
-    opacity: 0.9;
-  }
-  50% {
-    transform: translateY(18px); 
-    opacity: 0.2;
-  }
-  100% {
-    transform: translateY(10px);
-    opacity: 0.9;
-  }
-}
 /* Slow spin animation */
 @keyframes spin-slow {
   0% { transform: rotate(0deg); }
@@ -263,4 +138,47 @@ body {
 }
 
 
+
+
+
+@keyframes shoot {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(110px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(130px);
+    opacity: 0;
+  }
+}
+@keyframes orbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes orbitReverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes orbitSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-orbit {
+  animation: orbit 8s linear infinite;
+}
+
+.animate-orbit-reverse {
+  animation: orbitReverse 12s linear infinite;
+}
+
+.animate-orbit-slow {
+  animation: orbitSlow 18s linear infinite;
+}
 

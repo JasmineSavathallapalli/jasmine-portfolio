@@ -1,26 +1,114 @@
+import { useState, useEffect } from "react";
+
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  const [dark, setDark] = useState(true);
+
+  // ✅ Load saved theme OR system preference
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme) {
+      const isDark = savedTheme === "dark";
+      setDark(isDark);
+      document.documentElement.classList.toggle("dark", isDark);
+    } else {
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      setDark(prefersDark);
+      document.documentElement.classList.toggle("dark", prefersDark);
+    }
+  }, []);
+
+  // ✅ Toggle theme
+  const toggleTheme = () => {
+    const newTheme = !dark;
+    setDark(newTheme);
+
+    if (newTheme) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  };
+
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/5">
+    <header
+      className="fixed top-0 left-0 w-full z-50 backdrop-blur-md 
+      bg-white/80 dark:bg-[#060B18]/80 
+      border-b border-gray-300 dark:border-gray-800"
+    >
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
-        {/* LEFT - LOGO + NAME */}
-        <div className="flex items-center gap-3">
-          <div className="h-8 w-8 rounded-full bg-purple-600 text-white flex items-center justify-center font-semibold">
-            J
-          </div>
-          <h1 className="text-lg font-semibold tracking-wider text-white">
-            Jasmine <span className="text-purple-400">| Go Beyond</span>
-          </h1>
+        {/* LOGO */}
+        <div className="font-mono font-bold text-lg flex items-center gap-1">
+          <span className="text-gray-500">&lt;</span>
+          <span className="text-blue-500 dark:text-blue-400">Jasmine</span>
+          <span className="text-green-500 dark:text-green-400">/</span>
+          <span className="text-gray-500">&gt;</span>
         </div>
 
-        {/* CENTER NAV LINKS */}
-        <div className="hidden md:flex items-center gap-10 text-[18px] font-medium text-white/90">
-          <a href="#about" className="hover:text-purple-300 transition">About</a>
-          <a href="#experience" className="hover:text-purple-300 transition">Work</a>
-          <a href="#projects" className="hover:text-purple-300 transition">Projects</a>
-          <a href="#contact" className="hover:text-purple-300 transition">Contact</a>
+        {/* DESKTOP LINKS */}
+        <div className="hidden md:flex items-center gap-6 text-sm 
+          text-gray-600 dark:text-gray-400">
+
+          {["about", "experience", "skills", "projects", "contact"].map((item) => (
+            <a
+              key={item}
+              href={`#${item}`}
+              className="px-3 py-1 rounded-md transition
+              hover:text-black dark:hover:text-white
+              hover:bg-gray-200 dark:hover:bg-[#101A2C]"
+            >
+              {item.charAt(0).toUpperCase() + item.slice(1)}
+            </a>
+          ))}
+        </div>
+
+        {/* RIGHT SIDE */}
+        <div className="flex items-center gap-4">
+
+          {/* 🌗 THEME TOGGLE */}
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-lg 
+              bg-gray-200 dark:bg-[#101A2C] 
+              border border-gray-300 dark:border-gray-700 
+              hover:border-blue-500 transition"
+          >
+            {dark ? "🌙" : "☀️"}
+          </button>
+
+          {/* HAMBURGER */}
+          <button
+            onClick={() => setOpen(!open)}
+            className="md:hidden flex flex-col gap-1"
+          >
+            <span className="w-5 h-[2px] bg-black dark:bg-white"></span>
+            <span className="w-5 h-[2px] bg-black dark:bg-white"></span>
+            <span className="w-5 h-[2px] bg-black dark:bg-white"></span>
+          </button>
+
         </div>
       </nav>
+
+      {/* MOBILE MENU */}
+      {open && (
+        <div
+          className="md:hidden 
+          bg-white dark:bg-[#060B18] 
+          border-t border-gray-300 dark:border-gray-800 
+          px-6 py-4 flex flex-col gap-4 
+          text-gray-700 dark:text-gray-300"
+        >
+          {["about", "experience", "skills", "projects", "contact"].map((item) => (
+            <a key={item} href={`#${item}`} onClick={() => setOpen(false)}>
+              {item.charAt(0).toUpperCase() + item.slice(1)}
+            </a>
+          ))}
+        </div>
+      )}
     </header>
   );
 }

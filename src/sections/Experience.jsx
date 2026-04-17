@@ -1,126 +1,188 @@
+import { motion } from "framer-motion";
+
 export default function Experience() {
   const experiences = [
     {
-      badge: "OM",
-      period: "May 2025 – Jun 2025",
-      title: "Online Marketing Intern",
+      role: "Subject Matter Expert – AI/ML",
+      company: "House of Couton Private Limited",
+      duration: "Sep 2025 – Mar 2026",
+      tags: ["Remote", "7 months", "Internship"],
+      points: [
+        "Served as AI/ML subject matter expert — guided product research and validated intelligent feature decisions.",
+        "Applied ML evaluation techniques to improve and validate AI-driven product features.",
+        "Owned technical documentation on ML methodologies and system behavior.",
+        "Leveraged NLP and data analysis to extract actionable insights from unstructured datasets.",
+      ],
+    },
+    {
+      role: "Online Marketing Intern",
       company: "Pawzz Foundation",
-      type: "Internship",
-      location: "Remote",
+      duration: "May 2025 – Jun 2025",
+      tags: ["Remote", "Internship"],
       points: [
         "Worked on online marketing and digital strategy tasks.",
         "Assisted with campaign execution and awareness activities.",
-        "Supported organizational marketing initiatives remotely.",
+        "Supported organisational marketing initiatives remotely.",
       ],
     },
     {
-      badge: "FS",
-      period: "Jan 2024 – May 2024",
-      title: "Python Full Stack Developer Intern",
+      role: "Python Full Stack Developer Intern",
       company: "M/S Sattva Infotech",
-      type: "Internship",
-      location: "Remote",
+      duration: "Jan 2024 – May 2024",
+      tags: ["Remote", "4 months", "Internship"],
       points: [
-        "Full-stack Python development for web applications.",
-        "Worked on backend APIs, frontend integration and bug fixes.",
-        "Collaborated with the team on production-level tasks.",
+        "Built end-to-end web app using Python, Django, HTML5, CSS3, Bootstrap.",
+        "Implemented RESTful APIs and managed CRUD operations with MySQL.",
+        "Applied Agile practices — code reviews and unit testing.",
+        "Supported CI/CD pipelines via Git-based workflows.",
       ],
     },
     {
-      badge: "PY",
-      period: "Aug 2023 – Sept 2023",
-      title: "Python Developer Intern",
+      role: "Python Developer Intern",
       company: "Young Minds Technology Solutions Pvt Ltd",
-      type: "Internship",
-      location: "Remote",
+      duration: "Aug 2023 – Sep 2023",
+      tags: ["Remote", "Internship"],
       points: [
-        "Developed Python modules for internal tools and projects.",
-        "Contributed to project development and feature enhancements.",
-        "Debugged and optimized existing codebases.",
+        "Developed Python modules for internal tools.",
+        "Contributed to feature development.",
+        "Debugged and optimised existing codebases.",
       ],
     },
   ];
 
+  const fadeUp = {
+    hidden: { opacity: 0, y: 60, scale: 0.96 },
+    show: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
-    <section id="experience" className="max-w-6xl mx-auto px-6 py-24 text-white">
-      
-      <p className="text-purple-400 uppercase tracking-widest text-sm mb-2 text-center">
-        What I Have Done So Far
+    <section
+      id="experience"
+      className="max-w-4xl mx-auto px-6 py-24 relative
+      text-gray-900 dark:text-white"
+    >
+      {/* TITLE */}
+      <p className="text-green-500 dark:text-green-400 text-[9px] tracking-[3px] mb-2">
+        // WHAT I HAVE DONE SO FAR
       </p>
 
-      <h2 className="text-5xl font-bold text-center mb-20">
-        Work Experience<span className="text-purple-400">.</span>
+      <h2 className="text-4xl md:text-5xl font-bold mb-14">
+        Work Experience<span className="text-blue-500 dark:text-blue-400">.</span>
       </h2>
 
-      <div className="relative py-10 md:py-20 min-h-[600px]">
-        {/* Vertical line (desktop) */}
-  <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[3px] bg-purple-400/40" />
+      {/* TIMELINE */}
+      <div className="relative">
 
-  {/* Vertical line (mobile) */}
-  <div className="md:hidden absolute left-8 top-0 bottom-0 w-[3px] bg-purple-400/40" />
+        {/* LINE */}
+        <div className="absolute left-2.5 top-0 w-[2px] h-full 
+          bg-gray-300 dark:bg-[#1f2a44]"></div>
 
-        <div className="space-y-24">
-          {experiences.map((exp, index) => {
-            const isLeft = index % 2 === 0;
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={{
+            hidden: {},
+            show: { transition: { staggerChildren: 0.25 } },
+          }}
+          className="space-y-10"
+        >
+          {experiences.map((exp, index) => (
+            <motion.div
+              key={index}
+              variants={fadeUp}
+              className="relative pl-10"
+            >
 
-            return (
-              <div
-                key={exp.title}
-                className={`relative md:flex md:items-center`}
+              {/* DOT */}
+              <motion.div
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.4 }}
+                className="
+                  absolute left-0 top-3.5 w-5 h-5 rounded-full border-2 border-blue-500 
+                  bg-white dark:bg-[#060B18]
+                  flex items-center justify-center
+                "
               >
-                {/* Circle Badge (Desktop) */}
-                <div className="
-                  hidden md:flex
-                  absolute left-1/2 -translate-x-1/2
-                  w-20 h-20 rounded-full 
-                  bg-[#090b1a] border-[5px] border-purple-400 
-                  items-center justify-center 
-                  text-2xl font-bold text-purple-300
-                  shadow-[0_0_20px_rgba(168,85,247,0.6)]
-                  z-20
-                ">
-                  {exp.badge}
-                </div>
+                <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+              </motion.div>
 
-                {/* Date (Desktop) */}
-                <p
-                  className={`hidden md:block absolute top-1/2 -translate-y-1/2 text-slate-400 text-sm 
-                  ${isLeft ? "left-[52%] pl-6" : "right-[52%] pr-6 text-right"}`}
-                >
-                  {exp.period}
-                </p>
+              {/* CARD */}
+              <div
+                className="
+                  bg-gray-100 dark:bg-[#101A2C]
+                  border border-gray-300 dark:border-blue-500/40
+                  rounded-xl p-5
+                  transition duration-300
+                  hover:border-blue-400
+                  hover:shadow-[0_0_18px_rgba(59,130,246,0.25)]
+                  hover:scale-[1.01]
+                "
+              >
 
-                {/* Card */}
-                <div
-                  className={`w-full md:w-1/2 ${
-                    isLeft ? "md:pr-20 md:ml-0" : "md:pl-20 md:ml-auto"
-                  }`}
-                >
-                  {/* Mobile Badge inside card */}
-                  <div className="md:hidden flex items-center gap-3 mb-3">
-                    <div className="w-14 h-14 rounded-full bg-[#090b1a] border-4 border-purple-400 flex items-center justify-center text-lg font-bold text-purple-300">
-                      {exp.badge}
-                    </div>
-                    <p className="text-sm text-slate-400">{exp.period}</p>
-                  </div>
+                {/* HEADER */}
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                  <div>
+                    <h3 className="text-base font-semibold">
+                      {exp.role}
+                    </h3>
 
-                  <div className="bg-[#0f1123] border border-purple-500/30 rounded-2xl p-8 shadow-xl">
-                    <h3 className="text-2xl font-bold mb-1">{exp.title}</h3>
-                    <p className="text-slate-400 mb-4">
-                      {exp.company} · {exp.type} · {exp.location}
+                    <p className="text-blue-500 dark:text-blue-400 text-xs mt-1">
+                      {exp.company}
                     </p>
-
-                    <ul className="space-y-2 text-slate-300 text-[15px]">
-                      {exp.points.map((p, i) => (
-                        <li key={i}>• {p}</li>
-                      ))}
-                    </ul>
                   </div>
+
+                  <span className="
+                    mt-2 md:mt-0 text-[11px] px-3 py-1 rounded-md border
+                    border-green-400 dark:border-green-500
+                    text-green-600 dark:text-green-400
+                    bg-green-100 dark:bg-green-900/20
+                  ">
+                    {exp.duration}
+                  </span>
                 </div>
+
+                {/* TAGS */}
+                <div className="flex flex-wrap gap-2 mb-3 text-[11px]">
+                  {exp.tags.map((tag, i) => (
+                    <span
+                      key={i}
+                      className={`
+                        px-2.5 py-1 rounded-md border
+                        ${
+                          tag === "Remote"
+                            ? "border-blue-400 text-blue-600 bg-blue-100 dark:border-blue-500 dark:text-blue-400 dark:bg-blue-900/20"
+                            : tag.includes("month")
+                            ? "border-green-400 text-green-600 bg-green-100 dark:border-green-500 dark:text-green-400 dark:bg-green-900/20"
+                            : "border-purple-400 text-purple-600 bg-purple-100 dark:border-purple-500 dark:text-purple-300 dark:bg-purple-900/20"
+                        }
+                      `}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                {/* POINTS */}
+                <ul className="space-y-2 text-xs text-gray-700 dark:text-gray-300 leading-relaxed">
+                  {exp.points.map((point, i) => (
+                    <li key={i} className="flex gap-2">
+                      <span className="text-blue-500 dark:text-blue-400 mt-[2px] text-[10px]">▸</span>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+
               </div>
-            );
-          })}
-        </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

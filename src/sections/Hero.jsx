@@ -1,63 +1,120 @@
-
-
+import Robot from "../components/Robot";
+import { Typewriter } from "react-simple-typewriter";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Hero({ setResumeOpen }) {
   return (
-    <section className="relative min-h-[110vh] flex flex-col items-center justify-center text-center px-4 pt-24">
-
+    <section
+      className="
+      relative min-h-screen flex items-start pt-32 
+      max-w-6xl mx-auto px-6
+      text-gray-900 dark:text-white
+      "
+    >
       
 
-      {/* TEXT CONTENT */}
-      <p className="text-purple-400 tracking-[6px] text-sm mb-6 uppercase">
-        Introducing
-      </p>
+      <div className="grid md:grid-cols-2 gap-10 items-center w-full">
 
-      <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-        Hi, I'm{" "}
-        <span className="bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">
-          Jasmine Savathallapalli.
-        </span>
-      </h1>
+        {/* LEFT CONTENT */}
+        <div>
 
-      <p className="mt-4 text-lg md:text-xl text-gray-300">
-        Tech Explorer · Full-Stack Web Developer · AI/ML Enthusiast
-      </p>
+          {/* TAG */}
+          <div className="
+            mb-4 text-sm 
+            text-gray-500 dark:text-gray-400
+            border border-gray-300 dark:border-gray-700 
+            inline-block px-3 py-1 rounded-full
+          ">
+            ● jasmine.dev — ready to build
+          </div>
 
-      <div className="mt-10 flex flex-col md:flex-row items-center gap-4">
-        <button
-          onClick={() => setResumeOpen(true)}
-          className="px-7 py-3 rounded-lg text-white font-medium 
-            bg-gradient-to-r from-pink-500 to-purple-600 hover:opacity-90 transition"
-        >
-          View Resume
-        </button>
+          {/* TITLE */}
+          <h1 className="text-5xl md:text-6xl font-bold leading-tight tracking-tight">
+            Hi, I'm Jasmine <br />
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Savathallapalli.
+            </span>
+          </h1>
 
-        <a
-          href="https://www.linkedin.com/in/jasminesavathallapalli"
-          target="_blank"
-          className="flex items-center px-7 py-3 rounded-lg border border-purple-500 
-            hover:bg-purple-600/20 transition"
-        >
-          <i className="devicon-linkedin-plain text-white text-xl mr-2"></i>
-          500+ Connections
-        </a>
+          {/* SUBTEXT */}
+          <p className="text-gray-500 dark:text-gray-400 mt-4">
+            MCA'26 @ VIT Vellore · Full Stack Builder · AI/ML Explorer
+          </p>
 
-        <a
-          href="https://github.com/JasmineSavathallapalli"
-          target="_blank"
-          className="flex items-center px-7 py-3 rounded-lg border border-blue-500 
-            hover:bg-blue-600/20 transition"
-        >
-          <i className="devicon-github-original text-white text-xl mr-2"></i>
-          GitHub
-        </a>
-      </div>
+          {/* TYPEWRITER */}
+          <p className="text-blue-500 dark:text-blue-400 mt-6 text-lg font-medium h-[28px]">
+            <Typewriter
+              words={[
+                "Building full-stack web apps.",
+                "Building AI/ML systems.",
+                "Creating experiences users love."
+              ]}
+              loop={0}
+              cursor
+              cursorStyle="|"
+              typeSpeed={60}
+              deleteSpeed={40}
+              delaySpeed={1500}
+            />
+          </p>
 
-      {/* Scroll Indicator */}
-      <div className="mt-28 flex justify-center">
-        <div className="w-10 h-16 border-2 border-white/30 rounded-full flex justify-center">
-          <div className="w-3 h-3 bg-white/70 rounded-full mt-2 animate-[scroll_1.4s_ease-in-out_infinite]"></div>
+          {/* BUTTONS */}
+          <div className="flex gap-3 mt-8 flex-wrap">
+
+            <button
+              onClick={() => setResumeOpen(true)}
+              className="
+                bg-blue-500 text-white px-6 py-3 rounded-lg 
+                hover:bg-blue-600 transition
+              "
+            >
+              View Resume ↗
+            </button>
+
+            <a
+              href="https://www.linkedin.com/in/jasminesavathallapalli"
+              target="_blank"
+              className="
+                flex items-center gap-2
+                border border-gray-400 dark:border-gray-600 
+                text-gray-700 dark:text-gray-300
+                px-6 py-3 rounded-lg 
+                hover:border-blue-400 transition
+              "
+            >
+              <FaLinkedin className="text-blue-500 dark:text-blue-400 text-lg" />
+              500+ Connections
+            </a>
+
+            <a
+              href="https://github.com/JasmineSavathallapalli"
+              target="_blank"
+              className="
+                flex items-center gap-2
+                border border-gray-400 dark:border-gray-600 
+                text-gray-700 dark:text-gray-300
+                px-6 py-3 rounded-lg 
+                hover:border-blue-400 transition
+              "
+            >
+              <FaGithub className="text-black dark:text-white text-lg" />
+              GitHub ↗
+            </a>
+
+          </div>
+
+          {/* SCROLL TEXT */}
+          <div className="mt-16 text-gray-500 dark:text-gray-500 text-sm tracking-widest">
+            SCROLL
+          </div>
+
         </div>
+
+        {/* RIGHT SIDE 3D */}
+        <div className="hidden md:block">
+          <Robot />
+        </div>
+
       </div>
     </section>
   );
