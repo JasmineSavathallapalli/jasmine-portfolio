@@ -60,7 +60,9 @@ export default function App() {
       "
     >
       {/* 🌟 Cursor Glow */}
-      <CursorGlow />
+        <div className="hidden md:block">
+          <CursorGlow />
+        </div>  
 
       {/* 🌌 Stars (ONLY in dark mode) */}
       <div className="hidden dark:block">

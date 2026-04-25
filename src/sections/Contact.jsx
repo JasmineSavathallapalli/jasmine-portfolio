@@ -40,8 +40,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="max-w-5xl mx-auto px-6 py-24 
-      text-gray-900 dark:text-white"
+      className="max-w-5xl mx-auto px-6 py-24 text-gray-900 dark:text-white"
     >
 
       {/* HEADER */}
@@ -61,7 +60,7 @@ export default function Contact() {
             Let's build something together.
           </h3>
 
-          <p className="text-gray-600 dark:text-gray-400 text-sm mb-8 leading-relaxed">
+          <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base mb-8 leading-relaxed">
             Open to roles, collaborations and conversations. Whether you have a
             project or just want to talk tech — my inbox is always open.
           </p>
@@ -70,9 +69,8 @@ export default function Contact() {
             // CONNECT
           </p>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
-            {/* CARD COMPONENT */}
             {[
               {
                 icon: <FaEnvelope />,
@@ -108,17 +106,24 @@ export default function Contact() {
                 href={item.link}
                 target="_blank"
                 className={`
-                  flex items-center gap-3 p-4 rounded-xl
+                  flex items-center gap-3 p-4 sm:p-5 rounded-xl
                   bg-gray-100 dark:bg-[#101A2C]
                   border border-gray-300 dark:border-[#1f2a44]
                   ${item.color}
                   transition
                 `}
               >
-                {item.icon}
-                <div>
-                  <p className="text-sm font-semibold">{item.text}</p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">{item.label}</p>
+                <div className="shrink-0 text-lg">
+                  {item.icon}
+                </div>
+
+                <div className="min-w-0">
+                  <p className="text-sm sm:text-base font-semibold break-all">
+                    {item.text}
+                  </p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
+                    {item.label}
+                  </p>
                 </div>
               </a>
             ))}
@@ -130,8 +135,7 @@ export default function Contact() {
         <div>
           <form ref={formRef} onSubmit={sendEmail} className="flex flex-col gap-5">
 
-            {/* NAME + EMAIL */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
               <div>
                 <label className="text-green-500 dark:text-green-400 text-[11px] tracking-[2px]">
@@ -141,7 +145,7 @@ export default function Contact() {
                   name="name"
                   placeholder="Your full name"
                   className="
-                    w-full mt-1 px-4 py-2.5 rounded-lg text-sm
+                    w-full mt-1 px-4 py-3 rounded-lg text-sm
                     bg-white dark:bg-[#101A2C]
                     border border-gray-300 dark:border-[#1f2a44]
                     text-gray-900 dark:text-white
@@ -159,7 +163,7 @@ export default function Contact() {
                   name="email"
                   placeholder="your@email.com"
                   className="
-                    w-full mt-1 px-4 py-2.5 rounded-lg text-sm
+                    w-full mt-1 px-4 py-3 rounded-lg text-sm
                     bg-white dark:bg-[#101A2C]
                     border border-gray-300 dark:border-[#1f2a44]
                     text-gray-900 dark:text-white
@@ -171,7 +175,6 @@ export default function Contact() {
 
             </div>
 
-            {/* MESSAGE */}
             <div>
               <label className="text-green-500 dark:text-green-400 text-[11px] tracking-[2px]">
                 MESSAGE
@@ -191,10 +194,9 @@ export default function Contact() {
               />
             </div>
 
-            {/* BUTTON */}
             <button
               type="submit"
-              className="mt-2 w-fit px-6 py-2.5 bg-blue-500
+              className="mt-2 w-full sm:w-fit px-6 py-3 bg-blue-500
               hover:bg-blue-600 transition rounded-lg text-sm font-medium text-white"
             >
               ✈ Send Message
