@@ -9,27 +9,31 @@ export default function Hero({ setResumeOpen }) {
       <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center w-full">
 
         {/* LEFT CONTENT */}
-        <div>
+        <div className="md:pr-4 lg:pr-2">
 
           {/* TAG */}
-          <div className="
+          <div
+            className="
             mb-6 text-xs sm:text-sm md:text-base lg:text-lg
             text-gray-500 dark:text-gray-400
             border border-gray-300 dark:border-gray-700
             inline-block px-3 sm:px-4 py-1.5 rounded-full
-          ">
+          "
+          >
             ● jasmine.dev — ready to build
           </div>
 
           {/* TITLE */}
-          <h1 className="text-5xl sm:text-6xl md:text-[82px] lg:text-[92px] xl:text-[100px] font-bold leading-[1.02] tracking-tight">            Hi, I'm Jasmine <br />
+          <h1 className="text-5xl sm:text-6xl md:text-[74px] lg:text-[84px] xl:text-[92px] font-bold leading-[1.05] tracking-tight">
+            Hi, I'm Jasmine <br />
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Savathallapalli.
             </span>
           </h1>
 
           {/* SUBTEXT */}
-          <p className="text-gray-500 dark:text-gray-400 mt-6 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed whitespace-nowrap">            MCA'26 @ VIT Vellore · Full Stack Builder · AI/ML Explorer
+          <p className="text-gray-500 dark:text-gray-400 mt-6 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed md:whitespace-nowrap">
+            MCA'26 @ VIT Vellore · Full Stack Builder · AI/ML Explorer
           </p>
 
           {/* TYPEWRITER */}
@@ -38,7 +42,7 @@ export default function Hero({ setResumeOpen }) {
               words={[
                 "Building full-stack web apps.",
                 "Building AI/ML systems.",
-                "Creating experiences users love."
+                "Creating experiences users love.",
               ]}
               loop={0}
               cursor
