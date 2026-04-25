@@ -8,7 +8,7 @@ export default function Footer() {
 
         {/* LEFT */}
         <p className="text-base md:text-lg text-gray-400 font-mono">
-          © 2026{" "}
+          ©2026{" "}
           <span className="text-blue-400">Jasmine Savathallapalli</span>. All rights reserved.
         </p>
 
