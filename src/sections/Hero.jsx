@@ -22,16 +22,14 @@ export default function Hero({ setResumeOpen }) {
           </div>
 
           {/* TITLE */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[96px] xl:text-[110px] font-bold leading-[0.95] tracking-tight">
-            Hi, I'm Jasmine <br />
+          <h1 className="text-5xl sm:text-6xl md:text-[82px] lg:text-[92px] xl:text-[100px] font-bold leading-[1.02] tracking-tight">            Hi, I'm Jasmine <br />
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Savathallapalli.
             </span>
           </h1>
 
           {/* SUBTEXT */}
-          <p className="text-gray-500 dark:text-gray-400 mt-6 text-sm sm:text-base md:text-lg lg:text-2xl leading-relaxed">
-            MCA'26 @ VIT Vellore · Full Stack Builder · AI/ML Explorer
+          <p className="text-gray-500 dark:text-gray-400 mt-6 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed whitespace-nowrap">            MCA'26 @ VIT Vellore · Full Stack Builder · AI/ML Explorer
           </p>
 
           {/* TYPEWRITER */}
