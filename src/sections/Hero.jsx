@@ -4,9 +4,9 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Hero({ setResumeOpen }) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center max-w-7xl mx-auto px-6 pt-24 pb-10 text-gray-900 dark:text-white">
+    <section className="relative min-h-screen flex items-center justify-center max-w-[1500px] mx-auto px-8 pt-24 pb-10 text-gray-900 dark:text-white">
 
-      <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-center w-full">
+      <div className="grid md:grid-cols-[1.25fr_0.75fr] gap-8 lg:gap-12 items-center w-full">
 
         {/* LEFT CONTENT */}
         <div className="md:pr-4 lg:pr-2">
@@ -54,7 +54,7 @@ export default function Hero({ setResumeOpen }) {
           </p>
 
           {/* BUTTONS */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-10 w-full sm:w-auto flex-wrap">
+          <div className="flex flex-col sm:flex-row gap-4 mt-10 w-full sm:w-auto md:flex-nowrap">
 
             <button
               onClick={() => setResumeOpen(true)}
