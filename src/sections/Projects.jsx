@@ -7,67 +7,106 @@ import walletImg from "../assets/projects/walletImg.png";
 
 export default function Projects() {
   const projects = [
-    {
-      id: 1,
-      title: "Mental Health Detection from Multimodal Data using Deep Learning",
-      blurb:
-        "Research-oriented project that uses audio, video and text (DAIC-WOZ) with a multimodal deep learning pipeline to detect depression levels more reliably than unimodal methods. A fusion layer combines the representations while handling noisy or missing data, resulting in more stable and accurate depression predictions.",
-      github:
-        "https://github.com/JasmineSavathallapalli/Mental-Health-Detection-from-Multimodal-Data-using-Deep-Learning",
-      tags: ["#python", "#pytorch", "#deep-learning", "#multimodal-ai"],
-      image: mentalImg,
-    },
-    {
-      id: 2,
-      title: "Fake Currency Detection using Ensemble Approach",
-      blurb:
-        "Built an ensemble of classical ML models to classify genuine vs counterfeit currency using image-based features. The approach improves prediction stability by combining multiple algorithms and reducing model-specific errors.",
-      github:
-        "https://github.com/JasmineSavathallapalli/Fake-Currency-Detection-using-Ensemble-Approach",
-      tags: ["#python", "#machine-learning", "#ensemble-models"],
-      image: fakeImg,
-    },
-    {
-      id: 3,
-      title: "Slow Learners Classroom Booking",
-      blurb:
-        "Web platform where faculty can schedule remedial sessions and students can book slots, with authentication, dashboards and a clean UI.",
-      github:
-        "https://github.com/JasmineSavathallapalli/Classroom-Booking-Web-App-for-Slow-Learners",
-      tags: ["#react", "#nodejs", "#mongodb", "#mern", "#tailwindcss"],
-      image: classroomImg,
-    },
-    {
-      id: 4,
-      title: "Online Job Fair Application",
-      blurb:
-        "Full-stack application to manage virtual job fairs company registrations, job postings, student profiles and application tracking.",
-      github:
-        "https://github.com/JasmineSavathallapalli/Online-Job-Fair-Application",
-      tags: ["#fullstack", "#java", "#rest-api", "#apache-maven", "#jsp"],
-      image: jobfairImg,
-    },
-    {
-      id: 5,
-      title: "Student Study Portal",
-      blurb:
-        "Portal for hosting notes, resources and announcements.",
-      github:
-        "https://github.com/JasmineSavathallapalli/Student-Study-Portal",
-      tags: ["#html-css-js", "#django", "#education-tech"],
-      image: studyImg,
-    },
-    {
-      id: 6,
-      title: "Wallet Risk Scoring Blockchain Analytics",
-      blurb:
-        "Scores crypto wallets based on transaction behaviour to detect risky on-chain activity.",
-      github:
-        "https://github.com/JasmineSavathallapalli/Wallet-Risk-Scoring-From-Scratch",
-      tags: ["#blockchain", "#ml", "#data-analysis"],
-      image: walletImg,
-    },
-  ];
+  {
+    id: 1,
+    title: "AI Reliability Evaluation Platform",
+    blurb:
+      "Built a production-style AI reliability platform to evaluate LLM outputs using automated scoring pipelines, observability, prompt evaluation and response analysis. Designed for scalable AI testing workflows with modern full-stack architecture.",
+    github:
+      "https://github.com/JasmineSavathallapalli",
+    tags: [
+      "#ai-engineering",
+      "#llm",
+      "#langchain",
+      "#fastapi",
+      "#react",
+      "#mongodb",
+    ],
+    image: AiImg, 
+  },
+
+  {
+    id: 2,
+    title: "Mental Health Detection using Multimodal Deep Learning",
+    blurb:
+      "Research-focused multimodal AI system using audio, video and text features from DAIC-WOZ dataset for depression prediction. Combined deep learning representations through fusion pipelines for improved robustness and prediction accuracy.",
+    github:
+      "https://github.com/JasmineSavathallapalli/Mental-Health-Detection-from-Multimodal-Data-using-Deep-Learning",
+    tags: [
+      "#deep-learning",
+      "#multimodal-ai",
+      "#pytorch",
+      "#research",
+    ],
+    image: mentalImg,
+  },
+
+  {
+    id: 3,
+    title: "Wallet Risk Scoring Blockchain Analytics",
+    blurb:
+      "Developed a blockchain analytics engine that evaluates wallet transaction behaviour and assigns dynamic risk scores to identify suspicious on-chain activity using machine learning and behavioral analysis.",
+    github:
+      "https://github.com/JasmineSavathallapalli/Wallet-Risk-Scoring-From-Scratch",
+    tags: [
+      "#blockchain",
+      "#machine-learning",
+      "#data-analysis",
+      "#python",
+    ],
+    image: walletImg,
+  },
+
+  {
+    id: 4,
+    title: "Fake Currency Detection using Ensemble Learning",
+    blurb:
+      "Implemented an ensemble machine learning system combining multiple classification algorithms to identify counterfeit currency using image-derived features and prediction aggregation techniques.",
+    github:
+      "https://github.com/JasmineSavathallapalli/Fake-Currency-Detection-using-Ensemble-Approach",
+    tags: [
+      "#machine-learning",
+      "#ensemble-models",
+      "#computer-vision",
+      "#python",
+    ],
+    image: fakeImg,
+  },
+
+  {
+    id: 5,
+    title: "Slow Learners Classroom Booking Platform",
+    blurb:
+      "Full-stack MERN platform for scheduling remedial sessions, managing classroom bookings and improving faculty-student coordination with authentication, dashboards and responsive UI workflows.",
+    github:
+      "https://github.com/JasmineSavathallapalli/Classroom-Booking-Web-App-for-Slow-Learners",
+    tags: [
+      "#mern",
+      "#react",
+      "#nodejs",
+      "#mongodb",
+      "#tailwindcss",
+    ],
+    image: classroomImg,
+  },
+
+  {
+    id: 6,
+    title: "Online Job Fair Management System",
+    blurb:
+      "Built a scalable full-stack recruitment platform supporting company registrations, student applications, job postings and application tracking workflows for virtual job fairs.",
+    github:
+      "https://github.com/JasmineSavathallapalli/Online-Job-Fair-Application",
+    tags: [
+      "#java",
+      "#fullstack",
+      "#rest-api",
+      "#jsp",
+      "#mysql",
+    ],
+    image: jobfairImg,
+  },
+];
 
   return (
     <section

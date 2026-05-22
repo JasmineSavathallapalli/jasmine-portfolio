@@ -50,7 +50,7 @@ export default function Education() {
               </span>
 
               <span className="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 rounded-md border border-green-300 dark:border-green-700">
-                CGPA: 8.28
+                CGPA: 8.59
               </span>
 
               <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900/40 text-purple-600 dark:text-purple-300 rounded-md border border-purple-300 dark:border-purple-700">
@@ -119,7 +119,7 @@ export default function Education() {
 
             <div className="text-right">
               <p className="text-xs sm:text-sm text-gray-500">2020</p>
-              <p className="text-green-600 dark:text-green-400 text-sm sm:text-base md:text-lg font-semibold">9.37</p>
+              <p className="text-green-600 dark:text-green-400 text-sm sm:text-base md:text-lg font-semibold">CGPA:9.37</p>
             </div>
           </div>
 
@@ -141,7 +141,7 @@ export default function Education() {
 
             <div className="text-right">
               <p className="text-xs sm:text-sm text-gray-500">2018</p>
-              <p className="text-green-600 dark:text-green-400 text-sm sm:text-base md:text-lg font-semibold">10.0</p>
+              <p className="text-green-600 dark:text-green-400 text-sm sm:text-base md:text-lg font-semibold">CGPA:10.0</p>
             </div>
           </div>
 

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function Experience() {
   const experiences = [
     {
-      role: "Subject Matter Expert – AI/ML",
+      role: "Subject Matter Expert – AI/ML Intern",
       company: "House of Couton Private Limited",
       duration: "Sep 2025 – Mar 2026",
       tags: ["Remote", "7 months", "Internship"],
