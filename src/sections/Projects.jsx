@@ -2,7 +2,7 @@ import mentalImg from "../assets/projects/mentalImg.png";
 import fakeImg from "../assets/projects/fakeImg.png";
 import classroomImg from "../assets/projects/classroomImg.png";
 import jobfairImg from "../assets/projects/jobfairImg.png";
-import studyImg from "../assets/projects/studyImg.png";
+import studyImg from "../assets/projects/AiImg.png";
 import walletImg from "../assets/projects/walletImg.png";
 
 export default function Projects() {
