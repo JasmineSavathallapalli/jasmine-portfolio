@@ -2,8 +2,8 @@ import mentalImg from "../assets/projects/mentalImg.png";
 import fakeImg from "../assets/projects/fakeImg.png";
 import classroomImg from "../assets/projects/classroomImg.png";
 import jobfairImg from "../assets/projects/jobfairImg.png";
-import studyImg from "../assets/projects/AiImg.png";
 import walletImg from "../assets/projects/walletImg.png";
+import AiImg from "../assets/projects/AiImg.png";
 
 export default function Projects() {
   const projects = [
